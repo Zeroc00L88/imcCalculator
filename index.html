@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <title></title>
         <meta charset="UTF-8" />
@@ -10,17 +10,38 @@
     <body>
         <div>
             <div>
-                <form>
+                <div id="counter">
+                    <img
+                        src="./assets/images/meter.svg"
+                        alt="meter"
+                        width="200px"
+                    />
+                    <img
+                        src="./assets/images/needle.svg"
+                        alt="needle"
+                        width="200px"
+                    />
+                </div>
+                <form id="dataForm" name="dataForm" action="" method="GET">
                     <div>
                         <label for="size">Taille (cm)</label>
-                        <input type="number" name="size" value="" />
+                        <input type="number" name="size" id="size" value="" />
                     </div>
                     <div>
                         <label for="weight">Poids (kg)</label>
-                        <input type="number" name="weight" value="" />
+                        <input
+                            type="number"
+                            name="weight"
+                            id="weight"
+                            value=""
+                        />
+                    </div>
+                    <div>
+                        <button type="submit">Calculez votre IMC</button>
                     </div>
                 </form>
             </div>
         </div>
+        <script src="./script.js"></script>
     </body>
 </html>

@@ -4,4 +4,10 @@ let imcCalculator = (weight, size) => {
     return Math.round(weight / (size * size));
 };
 
-console.log(imcCalculator(70, 170));
+let dataForm = document.querySelector("#dataForm");
+
+dataForm.addEventListener("submit", () => {
+    let size = document.querySelector("#size");
+    let weight = document.querySelector("#weight");
+    alert(imcCalculator(weight.value, size.value));
+});

@@ -28,10 +28,23 @@ body > div {
         justify-content: center;
     }
 }
+#counter {
+    position: relative;
+}
+#counter img {
+    position: absolute;
+    z-index: 99;
+}
 form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 div div div {
