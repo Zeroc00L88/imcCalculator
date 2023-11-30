@@ -1,0 +1,42 @@
+/* GENERAL SETTINGS */
+/* overide all default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: lightgray;
+}
+
+body > div {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(49, 156, 206, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > div {
+        height: 35%;
+        width: 35%;
+        background: rgba(47, 47, 47, 0.3);
+        border: 3px solid black;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
