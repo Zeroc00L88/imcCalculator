@@ -7,7 +7,6 @@ let imcCalculator = (weight, size) => {
 let dataForm = document.querySelector("#dataForm");
 let test = "test";
 let currentPosition = "0deg";
-const r = document.querySelector(":root");
 
 dataForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -22,7 +21,6 @@ dataForm.addEventListener("submit", (e) => {
     console.log("imc :", imc);
 
     console.log("current", currentPosition);
-    r.style.setProperty("--needle-current-position", currentPosition);
 
     let position = "";
     if (imc < 18.5) {
@@ -37,15 +35,7 @@ dataForm.addEventListener("submit", (e) => {
         position = "72deg";
     }
 
-    console.log("position ", position);
-    r.style.setProperty("--needle-position", position);
-    needle.classList.toggle("position");
+    needle.style.transform = `rotate(${position})`;
 
     currentPosition = position;
-
-    console.log(
-        r.style.getPropertyValue("--needle-position"),
-        r.style.getPropertyValue("--needle-current-position"),
-    );
-    console.log("-----------------");
 });

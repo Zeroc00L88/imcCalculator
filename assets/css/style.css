@@ -1,9 +1,5 @@
 /* GENERAL SETTINGS */
 /* overide all default margin and padding */
-:root {
-    --needle-position: 0deg;
-    --needle-current-position: 0deg;
-}
 
 * {
     margin: 0;
@@ -43,6 +39,7 @@ body > div {
     position: absolute;
     z-index: 99;
     transform-origin: 50% calc(100% - 16px);
+    transition: transform ease 1s;
 }
 .firstAnim {
     animation:
@@ -76,18 +73,6 @@ body > div {
     }
     100% {
         transform: rotate(0deg);
-    }
-}
-.position {
-    animation: toPosition 1s linear forwards;
-}
-
-@keyframes toPosition {
-    0% {
-        transform: rotate(var(--needle-current-position));
-    }
-    100% {
-        transform: rotate(var(--needle-position));
     }
 }
 
