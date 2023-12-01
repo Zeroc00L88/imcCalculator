@@ -1,5 +1,10 @@
 /* GENERAL SETTINGS */
 /* overide all default margin and padding */
+:root {
+    --needle-position: 0deg;
+    --needle-current-position: 0deg;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +12,20 @@
 
 body {
     background: lightgray;
+    color: white;
 }
 
 body > div {
+    background-image: url("../images/background.jpg");
     height: 100vh;
     width: 100vw;
-    background: rgba(49, 156, 206, 1);
     display: flex;
     align-items: center;
     justify-content: center;
     > div {
-        height: 35%;
-        width: 35%;
-        background: rgba(47, 47, 47, 0.3);
+        height: 500px;
+        width: 500px;
+        background: rgba(255, 255, 255, 0.3);
         border: 3px solid black;
         border-radius: 15px;
         display: flex;
@@ -29,12 +35,62 @@ body > div {
     }
 }
 #counter {
+    width: 400px;
+    height: 200px;
     position: relative;
 }
-#counter img {
+#needle {
     position: absolute;
     z-index: 99;
+    transform-origin: 50% calc(100% - 16px);
 }
+.firstAnim {
+    animation:
+        toright 1s linear,
+        loop 0.1s linear 1s 10 alternate,
+        recenter 0.5s 2s linear;
+}
+
+@keyframes toright {
+    0% {
+        transform: rotate(-90deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+@keyframes loop {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(70deg);
+    }
+}
+@keyframes recenter {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.position {
+    animation: toPosition 1s linear forwards;
+}
+
+@keyframes toPosition {
+    0% {
+        transform: rotate(var(--needle-current-position));
+    }
+    100% {
+        transform: rotate(var(--needle-position));
+    }
+}
+
 form {
     display: flex;
     flex-direction: column;

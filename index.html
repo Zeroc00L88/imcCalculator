@@ -1,47 +1,36 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <title></title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="./assets/css/style.css" rel="stylesheet" />
-    </head>
 
-    <body>
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
         <div>
-            <div>
-                <div id="counter">
-                    <img
-                        src="./assets/images/meter.svg"
-                        alt="meter"
-                        width="200px"
-                    />
-                    <img
-                        src="./assets/images/needle.svg"
-                        alt="needle"
-                        width="200px"
-                    />
-                </div>
-                <form id="dataForm" name="dataForm" action="" method="GET">
-                    <div>
-                        <label for="size">Taille (cm)</label>
-                        <input type="number" name="size" id="size" value="" />
-                    </div>
-                    <div>
-                        <label for="weight">Poids (kg)</label>
-                        <input
-                            type="number"
-                            name="weight"
-                            id="weight"
-                            value=""
-                        />
-                    </div>
-                    <div>
-                        <button type="submit">Calculez votre IMC</button>
-                    </div>
-                </form>
+            <div id="counter">
+                <img id="meter" src="./assets/images/meter.svg" alt="meter" width="300px" />
+                <img id="needle" class="firstAnim" src="./assets/images/needle.svg" alt="needle" width="300px" />
             </div>
+            <form id="dataForm" name="dataForm" action="" method="GET">
+                <div>
+                    <label for="size">Taille (cm)</label>
+                    <input type="number" name="size" id="size" value="" />
+                </div>
+                <div>
+                    <label for="weight">Poids (kg)</label>
+                    <input type="number" name="weight" id="weight" value="" />
+                </div>
+                <div>
+                    <button type="submit">Calculez votre IMC</button>
+                </div>
+            </form>
         </div>
-        <script src="./script.js"></script>
-    </body>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
 </html>
