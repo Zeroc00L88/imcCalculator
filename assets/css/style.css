@@ -21,7 +21,7 @@ body > div {
     > div {
         height: 500px;
         width: 500px;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(100, 100, 100, 0.5);
         border: 3px solid black;
         border-radius: 15px;
         display: flex;
@@ -40,6 +40,10 @@ body > div {
     z-index: 99;
     transform-origin: 50% calc(100% - 16px);
     transition: transform ease 1s;
+}
+#message {
+    height: 80px;
+    width: 300px;
 }
 .firstAnim {
     animation:
